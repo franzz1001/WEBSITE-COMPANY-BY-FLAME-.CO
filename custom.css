@@ -1,0 +1,111 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: #1a1c1f;
+    color: #fff;
+    opacity: 0;
+    animation: fadeInAnimation 2s ease-in forwards; 
+}
+
+@keyframes fadeInAnimation {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+footer {
+    flex-shrink: 0;
+    background-color: #090A0D;
+    padding: 1em;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    color: #C7CDD8;
+}
+
+footer a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #dfdfdf;
+}
+
+.color-overlay {
+    background-color: rgba(0, 0, 0, 0.4);
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+@media (max-width: 767.98px) {
+    .color-overlay { min-height: 30vh; }
+    .navbar-nav { text-align: center; }
+    .navbar-nav a { display: block; padding: 10px 0; }
+}
+
+.singleCol {
+    max-width: 750px;
+    margin: auto;
+}
+
+.navbar-nav a {
+    color: #6097ff;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav a:hover {
+    color: #3b6fff;
+}
+
+.team-member {
+    text-align: center;
+    background-color: #1a1c1f;
+    padding: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: background-color 0.3s ease;
+    color: white;
+    border: 5px solid #0044ff75;
+    box-shadow: 0 0 10px rgba(3, 104, 255, 0.219);
+}
+
+.team-member:hover {
+    background: rgba(4, 63, 255, 0.171);
+    transform: scale(1.05);
+}
+
+.team-member .description {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.team-member:hover .description {
+    max-height: 300px;
+    overflow: auto;
+}
+
+.team-member h3, .team-member p {
+    color: #fff; 
+}
+
+header {
+    background: no-repeat center center;
+    background-size: cover;
+    color: white;
+    position: relative;
+}
